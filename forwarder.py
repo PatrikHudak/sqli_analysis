@@ -25,6 +25,11 @@ if (os.access(config['forwarder']['sid-map'], os.F_OK & os.R_OK) and
     sigmap.load_generator_map(open(config['forwarder']['gid-map']))
 
 def format_alert_data(event):
+	# WARNING/TODO: This needs to be changed!!
+	# This if-else is added only to provide correct client/server identification
+	# IDS might fire alert both ways, however analysis engine expects only
+	# 'HTTP request' alert.
+	#
     # Expecting services to have port < 10000
     if event['dport-icode'] < 10000:
         dst = (event['destination-ip'], event['dport-icode'])
