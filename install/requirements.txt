@@ -1,0 +1,14 @@
+celery
+moment
+requests
+python-Wappalyzer
+ipwhois
+pycountry
+user_agents
+flask
+flask-cors
+rethinkdb
+arrow
+uwsgi
+scapy-http
+idstools
